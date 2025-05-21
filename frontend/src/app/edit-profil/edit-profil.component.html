@@ -1,0 +1,42 @@
+<div class="containerMat">
+    <mat-card class="formEdit">
+        <mat-card-header>
+                <mat-card-title>Edit Profil :</mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content [formGroup] = "formgroup">
+            <mat-form-field>
+                <mat-label>username</mat-label>
+                <input matInput formControlName = "username">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Password</mat-label>
+                <input matInput formControlName = "password">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Roles</mat-label>
+                <mat-select formControlName ="roles">
+                    @for (item of roles; track item) {
+                        <mat-option [value]="item" >{{item.nameRole}}</mat-option>
+                    }
+                </mat-select>
+            </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button (click)="editeProfil()"><mat-icon>edite</mat-icon>edit</button>
+        </mat-card-actions>
+    </mat-card>
+    
+    @if (isEdit) {
+        <mat-card class="isedit">
+            <mat-card-header>
+                <mat-card-title style="color: green;"><mat-icon>check_box</mat-icon> the student {{profil.username}} is edited</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <img mat-card-image src="https://cdn.pixabay.com/photo/2024/03/25/14/29/ai-generated-8654865_1280.png" alt="student edit">
+            </mat-card-content>
+        </mat-card>
+    }
+    
+    </div>

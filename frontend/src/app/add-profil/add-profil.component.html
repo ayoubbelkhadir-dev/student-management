@@ -1,0 +1,41 @@
+<div class="content">
+    <mat-card class="containerForm">
+        <mat-card-header>
+            <mat-card-title>Add Profil</mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content  [formGroup]="formgroup">
+            <mat-form-field>
+                <mat-label>Username</mat-label>
+                <input matInput formControlName ="username">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Password</mat-label>
+                <input matInput formControlName ="password">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Roles</mat-label>
+                <mat-select formControlName ="roles">
+                    @for (item of roles; track item) {
+                        <mat-option [value]="item.id" >{{item.nameRole}}</mat-option>
+                    }
+                </mat-select>
+            </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button (click)="saveProfil()"><mat-icon>add</mat-icon> Save</button>
+        </mat-card-actions>
+    </mat-card>
+    
+    @if(isSave){
+        <mat-card class="issaved">
+            <mat-card-header>
+                <mat-card-title style="color: green;"><mat-icon>check_box</mat-icon> the Profil is saved</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <img mat-card-image src="https://cdn.pixabay.com/photo/2024/03/25/14/29/ai-generated-8654865_1280.png" alt="student add">
+            </mat-card-content>
+        </mat-card>
+    }
+</div>

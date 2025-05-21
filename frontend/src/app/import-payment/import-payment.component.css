@@ -1,0 +1,42 @@
+.containerForm{
+    max-width: 500px;
+    min-width: 500px;
+    background: 
+        linear-gradient(rgba(157, 157, 157, 0.5), rgba(255, 255, 255, 0.5)),
+        url("https://img.freepik.com/free-vector/digital-credit-card-payment-background-fast-technology-style_1017-30674.jpg?t=st=1737495010~exp=1737498610~hmac=e439641335188dcca6db9bcd808d50025d08214b4d459d34d247515e5afd57b6&w=1380");
+        background-size: cover;
+    position: cover;
+    color: white;
+
+}
+mat-card{
+    margin: 10px;
+}
+mat-form-field{
+    display: block;
+}
+.content{
+    display: flex;
+    gap: 6px;
+}
+.listeStudent{
+    max-width: 400px;
+    max-height: 800px;
+}
+.itemStudent button{
+    display: block;
+}
+mat-list{
+    max-height: 500px; 
+    overflow-y: auto;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+}
+.issaved{
+    max-width: 250px;
+    max-height:300px;
+    background-color: rgba(0, 255, 0, 0.185);
+}

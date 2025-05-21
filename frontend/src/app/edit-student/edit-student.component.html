@@ -1,0 +1,46 @@
+<div class="containerMat">
+<mat-card class="formEdit">
+    <mat-card-header>
+            <mat-card-title>Edit Student : {{student?.code}}  {{student?.firstname}} {{student?.lastname}}</mat-card-title>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content [formGroup] = "formGroup">
+        <mat-form-field>
+            <mat-label>Firstname</mat-label>
+            <input matInput formControlName = "firstname">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>lastname</mat-label>
+            <input matInput formControlName = "lastname">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>code</mat-label>
+            <input matInput [readonly]="true"  formControlName = "code">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>ProgramId</mat-label>
+            <input matInput formControlName = "programeId">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Photo</mat-label>
+            <input matInput formControlName ="photo">
+        </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button (click)="editStudentById()"><mat-icon>edite</mat-icon>edit</button>
+    </mat-card-actions>
+</mat-card>
+
+@if (isEdit) {
+    <mat-card class="isedit">
+        <mat-card-header>
+            <mat-card-title style="color: green;"><mat-icon>check_box</mat-icon> the student {{student.firstname}} {{student.lastname}} is edited</mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+            <img mat-card-image src="https://cdn.pixabay.com/photo/2024/03/25/14/29/ai-generated-8654865_1280.png" alt="student edit">
+        </mat-card-content>
+    </mat-card>
+}
+
+</div>

@@ -1,0 +1,11 @@
+mat-card{
+   background: 
+   linear-gradient(rgba(157, 157, 157, 0.5), rgba(255, 255, 255, 0.5)),
+    url("https://img.freepik.com/free-vector/graduation-hats-frame_53876-91594.jpg?t=st=1737494776~exp=1737498376~hmac=0be8df869c136790228b62d5b1416f5cdfda06d9e1f317c2b0c47731399968b1&w=740");
+    background-size: cover;
+    position: cover;
+    color: white;
+}
+table{
+    background-color: rgba(255, 255, 255, 0.322);
+}

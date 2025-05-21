@@ -1,0 +1,45 @@
+.containt{
+    display: flex;
+}
+.containerTab{
+    max-width: 500px;
+    min-width: 500px;
+    background: 
+        linear-gradient(rgba(157, 157, 157, 0.5), rgba(255, 255, 255, 0.5)),
+        url("https://img.freepik.com/free-vector/abstract-blue-circle-black-background-technology_1142-12714.jpg?t=st=1737682299~exp=1737685899~hmac=d152adea89bba5667f3a9ea1ee5e1c25d29681381b2e743503602ab0c8d9ea70&w=900");
+        background-size: cover;
+    position: cover;
+    color: white;
+}
+
+.containerForm{
+    
+    display: block;
+}
+.isForm{
+    width: 400px;
+    max-height: 200px;
+    background: 
+        linear-gradient(rgba(157, 157, 157, 0.5), rgba(255, 255, 255, 0.5)),
+        url("https://img.freepik.com/free-vector/abstract-blue-circle-black-background-technology_1142-12714.jpg?t=st=1737682299~exp=1737685899~hmac=d152adea89bba5667f3a9ea1ee5e1c25d29681381b2e743503602ab0c8d9ea70&w=900");
+        background-size: cover;
+    position: cover;
+    color: white;
+
+}
+mat-card{
+    margin: 10px;
+}
+mat-form-field{
+    display: block;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+}
+.isaved{
+    max-width: 250px;
+    max-height:300px;
+    background-color: rgba(0, 255, 0, 0.185);
+}

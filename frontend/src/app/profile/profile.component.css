@@ -1,0 +1,115 @@
+.containerHeader{
+    margin: 10px 10px 0px 10px;
+    background:
+    url("https://img.freepik.com/free-photo/abstract-networking-concept-still-life-arrangement_23-2149035709.jpg?t=st=1737683736~exp=1737687336~hmac=7f7936f093825774cd915981679189ccb2fd5c916a69d35514f78cf663d7f49b&w=826");
+    color: rgb(255, 255, 255);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.containerProfil{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px; 
+}
+.blocProfil{
+    width: 200px;
+    height: 130px;
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(105, 105, 105, 0.5)),
+    url("https://img.freepik.com/free-vector/abstract-blue-circle-black-background-technology_1142-12714.jpg?t=st=1737682299~exp=1737685899~hmac=d152adea89bba5667f3a9ea1ee5e1c25d29681381b2e743503602ab0c8d9ea70&w=900");
+    background-size: cover;
+    background-position: left;
+    color: white;
+
+}
+
+mat-card-actions {
+    margin-left: 80px;
+    display: flex;
+    
+}
+.delete {
+    background-color: red;
+    
+}
+.edit {
+    background-color: green;
+    
+}
+mat-card-actions button{
+    margin: 2px;
+    
+}
+mat-card-actions button mat-icon{
+    color:white;
+    
+}
+mat-card-subtitle{
+    color: rgb(0, 195, 255);
+}
+
+.Addprofil mat-icon{
+    color: green;
+}
+.Addprofil{
+    color: rgb(255, 255, 255);
+}
+.addRole mat-icon{
+    color: green;
+}
+.addRole{
+    color: rgb(255, 255, 255);
+}
+mat-card-subtitle {
+    font-family: Arial, sans-serif;
+    color: #e5ff00; 
+  }
+  
+  mat-card-subtitle label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 8px;
+    color: #333;
+  }
+  
+  mat-card-subtitle select {
+    display: inline-block;
+    padding: 6px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    border: 0.2px solid #0046c7;
+    border-radius: 4px;
+    background-color: #f9f9f93d;
+    color: #ffffff;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  mat-card-subtitle select:hover {
+    border-color: #0078d7;
+    background-color: #e6f7ff;
+  }
+
+  mat-card-subtitle option {
+    padding: 2px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  mat-card-subtitle .optionrole {
+    font-style: italic;
+    color: #0078d7; 
+  }
+  
+  @media (max-width: 768px) {
+    mat-card-subtitle {
+      padding: 5px;
+    }
+  
+    mat-card-subtitle select {
+      width: 100%;
+    }
+  }

@@ -1,0 +1,49 @@
+<mat-card class="container">
+    <mat-card-header>
+        <mat-card-title>Payment : {{id}}</mat-card-title>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    @if(isCreaed){
+        <mat-card-actions class="blocButton">
+            <button mat-flat-button class="rejected" (click)="paymentRejected()">Rejected</button>
+            <button mat-flat-button class="accepted" (click)="paymentAccepted()">Accepted</button>
+        </mat-card-actions>
+    }@else {
+        @if(isAcctepted){
+            <mat-card-subtitle style="color: green;"><mat-icon>check_box</mat-icon> Paymment is Accepted</mat-card-subtitle>
+        }@if(isRejected){
+            <mat-card-subtitle style="color: red;"><mat-icon>block</mat-icon> Paymment is Rejected</mat-card-subtitle>
+        }
+    }
+   
+    <mat-divider></mat-divider>
+    <mat-card-content>
+        <div class="blocData">
+            <h1>Code student : {{payment?.student?.code}}</h1>
+            <h2>Amount : {{payment?.amount}}</h2>
+            <h3>Type Payment : {{payment?.type}}</h3>
+            <h3>Status Payment : {{payment?.status}}</h3>
+        </div>
+    </mat-card-content>
+</mat-card>
+<mat-card class="container">
+    <mat-card-header>
+        <mat-card-title>Payment file :</mat-card-title>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+        <pdf-viewer [src]="pdfSrc"
+              [original-size]="true"
+              [render-text]="true"
+              [rotation]="0"
+              [show-all]="true"
+              [fit-to-page]="true"
+              [zoom]="1"
+              [zoom-scale]="'page-width'"
+              [external-link-target]="'blank'"
+              [autoresize]="true"
+              [show-borders]="false"
+              class="pdf-viewer">
+            </pdf-viewer>
+    </mat-card-content>
+</mat-card>

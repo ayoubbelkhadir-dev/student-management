@@ -1,0 +1,31 @@
+.containerForm{
+    max-width: 500px;
+    min-width: 500px;
+    background: 
+        linear-gradient(rgba(157, 157, 157, 0.5), rgba(255, 255, 255, 0.5)),
+        url("https://img.freepik.com/free-photo/abstract-networking-concept-still-life-arrangement_23-2149035709.jpg?t=st=1737683736~exp=1737687336~hmac=7f7936f093825774cd915981679189ccb2fd5c916a69d35514f78cf663d7f49b&w=826");
+        background-size: cover;
+    position: cover;
+    color: white;
+
+}
+mat-card{
+    margin: 10px;
+}
+mat-form-field{
+    display: block;
+}
+.content{
+    display: flex;
+    gap: 6px;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+}
+.issaved{
+    max-width: 250px;
+    max-height:300px;
+    background-color: rgba(0, 255, 0, 0.185);
+}

@@ -1,0 +1,12 @@
+mat-card{
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(105, 105, 105, 0.5)),
+    url("https://img.freepik.com/free-vector/digital-credit-card-payment-background-fast-technology-style_1017-30674.jpg?t=st=1737495010~exp=1737498610~hmac=e439641335188dcca6db9bcd808d50025d08214b4d459d34d247515e5afd57b6&w=1380");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    color: white;
+ }
+ table{
+     background-color: rgba(255, 255, 255, 0.322);
+ }

@@ -1,0 +1,12 @@
+.rejected{
+    background-color: red;
+}
+.accepted{
+    background-color: green;
+}
+.pdf-viewer{
+    display: block;
+    margin: 0 auto;
+    height: 800px;
+    max-width: 1200px;
+}

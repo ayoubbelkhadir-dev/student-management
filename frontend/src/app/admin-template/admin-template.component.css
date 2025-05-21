@@ -1,0 +1,15 @@
+.mat-toolbar.mat-primary {
+    background: #007bff;
+  }
+  .drawerList mat-drawer{
+    width: 200px;
+
+  }
+  mat-drawer-container{
+    background-color: white;
+  }
+  mat-drawer{
+    background-color: rgb(255, 255, 255);
+
+
+  }

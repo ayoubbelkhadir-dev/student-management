@@ -1,0 +1,30 @@
+<mat-card class="container">
+    <mat-card-header>
+        <mat-card-title>Dashboard</mat-card-title>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+</mat-card>
+
+<mat-card class="containerStudent">
+        <mat-card-header>
+            <mat-card-title><mat-icon>fiber_new</mat-icon> New Student added :</mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+            <div class="student">
+                <h1>Student : {{lastStudent?.code}} {{lastStudent?.firstname}} {{lastStudent?.lastname}}  </h1>
+            </div>
+        </mat-card-content>
+</mat-card>
+
+<mat-card class="containerPayment">
+    <mat-card-header>
+        <mat-card-title><mat-icon>fiber_new</mat-icon> New Payment added : </mat-card-title>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+        <div class="payment">
+            <h1> Payment {{lastPayment?.type}} by student code : {{lastPayment?.student?.code}} </h1>
+        </div>
+    </mat-card-content>
+</mat-card>

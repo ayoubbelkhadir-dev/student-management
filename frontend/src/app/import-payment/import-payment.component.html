@@ -1,0 +1,82 @@
+<div class="content">
+    <mat-card class="containerForm">
+        <mat-card-header>
+            <mat-card-title>Import Payment</mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content  [formGroup]="formGroup">
+            <mat-form-field>
+                <mat-label>Date</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName = "date">
+                <mat-hint>DD/MM/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+            <mat-form-field>
+                <mat-label>Amount</mat-label>
+                <input matInput formControlName = "amount">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Type</mat-label>
+                <mat-select formControlName = "type">
+                    @for (item of typePayment; track item) {
+                        <mat-option [value]="item" >{{item}}</mat-option>
+                    }
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Status</mat-label>
+                <input readonly matInput formControlName = "status">
+                
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>File</mat-label>
+                <button type="button" mat-icon-button matPrefix (click)="f_input.click()"><mat-icon>attach_file</mat-icon></button>
+                <input matInput readonly formControlName = "filename">
+                <input type="file" hidden #f_input (change)="selectFile($event)" >
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Code Student</mat-label>
+                <button (click)="isListStudent()" mat-button matPrefix><mat-icon>school</mat-icon> select</button>
+                <input readonly matInput formControlName = "codeStudent">
+            </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button (click)="savePayment()"><mat-icon>add</mat-icon> Save</button>
+        </mat-card-actions>
+    </mat-card>
+    
+    @if(listeStudent){
+        <div class="listeStudent">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title>Select Student :</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <mat-list>
+                        @for(item of students; track item){
+                            <mat-list-item class="itemStudent">
+                                <mat-icon (click)="selectStudent(item)" matListItemIcon>school</mat-icon>
+                                <div matListItemTitle>{{item.firstname}} {{item.lastname}}</div>
+                                <div matListItemLine>code : {{item.code}}</div>
+                            </mat-list-item>
+                            <mat-divider></mat-divider>
+                        }                      
+                    </mat-list>
+                </mat-card-content>
+            </mat-card>
+        </div>
+
+    }
+    @if(isSave){
+        <mat-card class="issaved">
+            <mat-card-header>
+                <mat-card-title style="color: green;"><mat-icon>check_box</mat-icon> the payment is saved</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <img mat-card-image src="https://cdn.pixabay.com/photo/2024/03/25/14/29/ai-generated-8654865_1280.png" alt="student add">
+            </mat-card-content>
+        </mat-card>
+    }
+</div>

@@ -1,0 +1,29 @@
+mat-form-field{
+    display: block;
+}
+.formEdit{
+    max-width: 500px;
+    min-width: 500px;
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(105, 105, 105, 0.5)),
+    url("https://img.freepik.com/free-vector/graduation-hats-frame_53876-91594.jpg?t=st=1737494776~exp=1737498376~hmac=0be8df869c136790228b62d5b1416f5cdfda06d9e1f317c2b0c47731399968b1&w=740");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+mat-card{
+    margin: 10px;
+}
+.isedit{
+    max-width: 250px;
+    max-height:300px;
+    background-color: rgba(0, 255, 0, 0.185);
+}
+.containerMat{
+    display: flex;
+    gap: 5px; 
+}
+img{
+    width: 200px;
+    height: 200px;
+}

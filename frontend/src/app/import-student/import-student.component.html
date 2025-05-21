@@ -1,0 +1,58 @@
+<div class="containerSave">
+<mat-card class="formCreate">
+    <mat-card-header>
+        <mat-card-title>Import Student</mat-card-title>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content [formGroup] = "formGroup">
+        <mat-form-field>
+            <mat-label>Firstname</mat-label>
+            <input matInput formControlName = "firstname">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>lastname</mat-label>
+            <input matInput formControlName = "lastname" >
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>code</mat-label>
+            <input matInput formControlName = "code">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>programeId</mat-label>
+            <input matInput formControlName = "programeId">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>photo</mat-label>
+            <input matInput formControlName = "photo" >
+        </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button (click)="saveStudent()"><mat-icon>add</mat-icon>SAVE</button>
+    </mat-card-actions>
+</mat-card>
+@if (isSave) {
+    <mat-card class="issaved">
+        <mat-card-header>
+            <mat-card-title style="color: green;"><mat-icon>check_box</mat-icon> the student {{student.firstname}} {{student.lastname}} is saved</mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+            <img mat-card-image src="https://cdn.pixabay.com/photo/2024/03/25/14/29/ai-generated-8654865_1280.png" alt="student add">
+        </mat-card-content>
+    </mat-card>
+}
+
+@if (isExsit) {
+    <mat-card class="isexist">
+        <mat-card-header>
+            <mat-card-title style="color: rgb(255, 0, 0);"><mat-icon>clear</mat-icon> Student is already definde by code {{student.code}}</mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+            <img mat-card-image src="https://cdn.pixabay.com/photo/2022/08/20/02/21/people-7398069_1280.png" alt="student rejected">
+        </mat-card-content>
+    </mat-card>
+}
+
+</div>
+

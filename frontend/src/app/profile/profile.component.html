@@ -1,0 +1,37 @@
+<mat-card class="containerHeader">
+    <mat-card-header>
+        <mat-card-title>Profile</mat-card-title>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+        <button (click)="addProfil()" mat-button class="Addprofil"><mat-icon>add</mat-icon>Add profil</button>
+        <button (click)="manageRole()" mat-button class="addRole"><mat-icon>settings</mat-icon>Manage Role</button>
+    </mat-card-content>
+</mat-card>
+<div class="containerProfil">
+    @for(profil of profils;track $index){
+        <mat-card class="blocProfil">
+            <mat-card-header>
+                <mat-card-title>{{profil.username}}</mat-card-title>
+                <mat-card-subtitle>
+                    roles :
+                <select required>
+                @for(role of profil.roles;track $index){ 
+                    <option class="optionrole" [value]="role.nameRole">{{role.nameRole}}</option>
+                }
+            </select>
+        </mat-card-subtitle>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+             
+            </mat-card-content>
+            <mat-card-actions>
+                <button (click)="editProfil(profil.id)" mat-icon-button class="edit" ><mat-icon>edit</mat-icon></button>
+                <button (click)="deleteProfil(profil)" mat-icon-button class="delete" ><mat-icon>delete</mat-icon></button>
+            </mat-card-actions>
+        </mat-card>
+    }
+
+    
+</div>

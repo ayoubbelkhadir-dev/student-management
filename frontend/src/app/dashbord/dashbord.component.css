@@ -1,0 +1,44 @@
+img{
+    padding: 10px;
+    width: 150px;
+    height: 150px;
+}
+mat-icon{
+    color: yellow;
+}
+mat-card{
+    color:white;
+    background-color: #007bff;
+}
+mat-divider{
+    border-top-color: rgba(255, 255, 255, 0.12)
+}
+.student {
+    color: rgb(255, 255, 255);
+    height: 100px;
+
+}
+.payment{
+    color: rgb(255, 255, 255);
+    height: 100px;
+}
+.containerStudent{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(105, 105, 105, 0.5)),
+    url("https://img.freepik.com/free-vector/graduation-hats-frame_53876-91594.jpg?t=st=1737494776~exp=1737498376~hmac=0be8df869c136790228b62d5b1416f5cdfda06d9e1f317c2b0c47731399968b1&w=740");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.containerPayment{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(105, 105, 105, 0.5)),
+    url("https://img.freepik.com/free-vector/digital-credit-card-payment-background-fast-technology-style_1017-30674.jpg?t=st=1737495010~exp=1737498610~hmac=e439641335188dcca6db9bcd808d50025d08214b4d459d34d247515e5afd57b6&w=1380");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+
+
+}
